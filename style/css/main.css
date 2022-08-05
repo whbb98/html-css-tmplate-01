@@ -306,3 +306,53 @@ header section .container p {
 }
 
 /***************** about section **********************/
+.about {
+  margin-top: var(--sectionMargin)
+}
+.about .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.about .container .imgDiv {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.about .container .imgDiv::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  border-left:80px solid #ccc;
+  left: 10%;
+  z-index: -1;
+}
+.about .container .imgDiv::after {
+  position: absolute;
+  content: "";
+  width: 10%;
+  height: 80%;
+  border-left: 50px solid var(--primaryColor);
+  border-bottom: 50px solid var(--primaryColor);
+  right: 1%;
+  z-index: -1;
+}
+.about .container .imgDiv img {
+  width: 70%;
+  height: 70%;
+}
+/* .about .container .text {
+
+}
+.about .container .text p {
+} */
+.about .container .text p:first-child {
+  margin-bottom: 40px;
+}
+.about .container .text hr {
+  display: inline-block;
+  width: 50%;
+  border: 1px solid var(--primaryColor);
+}
