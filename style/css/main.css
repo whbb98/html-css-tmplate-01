@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: 0 auto;
   padding: var(--primaryPadding);
 }
@@ -154,6 +154,7 @@ header section .container {
 }
 header section .container h1 {
   color: var(--primaryColor);
+  font-size: 3em;
 }
 header section .container p {
   text-align: center;
@@ -195,7 +196,7 @@ header section .container p {
 .heading .container {
   text-align: center;
 }
-.heading .container h1 {
+.heading .container h2 {
   margin: 0;
   color: var(--bgPrimaryColor);
   font-size: 5em;
@@ -307,7 +308,7 @@ header section .container p {
 
 /***************** about section **********************/
 .about {
-  margin-top: var(--sectionMargin)
+  margin-top: var(--sectionMargin);
 }
 .about .container {
   display: grid;
@@ -325,7 +326,7 @@ header section .container p {
   position: absolute;
   content: "";
   height: 100%;
-  border-left:80px solid #ccc;
+  border-left: 80px solid #ccc;
   left: 10%;
   z-index: -1;
 }
@@ -343,16 +344,75 @@ header section .container p {
   width: 70%;
   height: 70%;
 }
-/* .about .container .text {
 
-}
-.about .container .text p {
-} */
 .about .container .text p:first-child {
   margin-bottom: 40px;
+  font-weight: 800;
 }
 .about .container .text hr {
   display: inline-block;
   width: 50%;
   border: 1px solid var(--primaryColor);
+}
+
+/***************** contact section **********************/
+
+.contact {
+  margin-top: var(--sectionMargin);
+}
+.contact .container {
+  text-align: center;
+}
+
+.contact .container p {
+  margin: 0;
+}
+.contact .container > p {
+  margin-bottom: 10px;
+  font-size: 2em;
+  font-weight: bold;
+  color: var(--secondaryColor);
+}
+.contact .container > a {
+  font-weight: bold;
+  font-size: 2em;
+  color: var(--primaryColor);
+  text-decoration: none;
+}
+.contact .container .social {
+  font-size: 1.5em;
+  margin-top: 30px;
+  color: var(--secondaryColor);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+.contact .container .social p {
+  margin-right: 10px;
+}
+.contact .container div .icons a {
+  color: var(--secondaryColor);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+  .contact .container {
+    font-size: 10px;
+  }
+}
+
+/***************** footer section **********************/
+footer {
+  background-color: #2c4755;
+  color: #fff;
+}
+footer .container {
+  text-align: center;
+}
+footer .container p {
+}
+footer .container p span {
+  color: var(--primaryColor);
 }
