@@ -354,7 +354,7 @@ header section .container p {
   width: 50%;
   border-bottom-width: 3px;
   border-bottom-style: solid;
-  border-color: transparent transparent var(--primaryColor) transparent;
+  border-bottom: var(--primaryColor);
 }
 
 /***************** contact section **********************/
