@@ -159,3 +159,119 @@ header section .container p {
   text-align: center;
   width: 40%;
 }
+
+/***************** projects section **********************/
+.projects {
+  margin-top: var(--sectionMargin);
+}
+.projects .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.projects .card {
+  padding: var(--primaryPadding);
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+  text-transform: capitalize;
+}
+.projects .card i {
+  color: var(--primaryColor);
+  font-size: 3em;
+}
+.projects .card h3 {
+  color: var(--secondaryColor);
+}
+.projects .card p {
+  color: var(--secondaryColor);
+  line-height: 2em;
+}
+
+/***************** heading section **********************/
+.heading {
+  text-transform: capitalize;
+}
+.heading .container {
+  text-align: center;
+}
+.heading .container h1 {
+  margin: 0;
+  color: var(--bgPrimaryColor);
+  font-size: 5em;
+}
+.heading .container p {
+  margin: 0;
+  position: relative;
+  top: -20px;
+}
+/***************** services section **********************/
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.services .col {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.services .col .srv {
+  display: flex;
+  flex-flow: row nowrap;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.services .col .srv i {
+  font-size: 2em;
+  color: var(--primaryColor);
+  margin-right: 20px;
+}
+/* .services .col .srv .text {
+} */
+.services .col .srv .text h3 {
+  margin: 0;
+  color: var(--secondaryColor);
+}
+.services .col .srv .text p {
+  color: var(--secondaryColor);
+  line-height: 1.5em;
+  height: 100px;
+}
+.services .container .image {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.services .container .image img {
+  width: 80%;
+}
+
+.services .container .image div{
+  text-align: center;
+  position: relative;
+}
+.services .container .image div::after{
+  content: "";
+  border-right: 50px solid var(--secondaryColor);
+  height: 120%;
+  position: absolute;
+  top: -10%;
+  right: 10px;
+  z-index: -1;
+}
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .services .container .image{
+    grid-column: span 2;
+  }
+}
+@media (max-width: 992px){
+  .services .container .image{
+    display: none;
+  }
+}
+/***************** portfolio section **********************/
