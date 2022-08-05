@@ -143,7 +143,7 @@ nav .menu ul li:hover a {
 
 header section {
   height: calc(100vh - 66px);
-  background-image: url("/style/images/mountains.jpg");
+  background-image: url("../images/mountains.jpg");
   background-size: cover;
   text-transform: capitalize;
 }
@@ -352,9 +352,9 @@ header section .container p {
 .about .container .text hr {
   display: inline-block;
   width: 50%;
-  border-bottom-width: 3px;
-  border-bottom-style: solid;
-  border-bottom: var(--primaryColor);
+  border: none;
+  height: 5px;
+  background-color: var(--primaryColor);
 }
 
 /***************** contact section **********************/
