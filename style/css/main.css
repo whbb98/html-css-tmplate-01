@@ -4,7 +4,7 @@
   --secondaryColor: #2c4755;
   --bgPrimaryColor: #f6f6f6;
   --primaryPadding: 10px;
-  --sectionMargin: 20px;
+  --sectionMargin: 50px;
   --spaceWidth: 20px;
   --mainDuration: 0.3s;
 }
@@ -206,6 +206,9 @@ header section .container p {
   top: -20px;
 }
 /***************** services section **********************/
+.services {
+  margin-top: var(--sectionMargin);
+}
 .services .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -249,11 +252,11 @@ header section .container p {
   width: 80%;
 }
 
-.services .container .image div{
+.services .container .image div {
   text-align: center;
   position: relative;
 }
-.services .container .image div::after{
+.services .container .image div::after {
   content: "";
   border-right: 50px solid var(--secondaryColor);
   height: 120%;
@@ -263,15 +266,43 @@ header section .container p {
   z-index: -1;
 }
 
-
 @media (min-width: 768px) and (max-width: 992px) {
-  .services .container .image{
+  .services .container .image {
     grid-column: span 2;
   }
 }
-@media (max-width: 992px){
-  .services .container .image{
+@media (max-width: 992px) {
+  .services .container .image {
     display: none;
   }
 }
 /***************** portfolio section **********************/
+
+.portfolio {
+  margin-top: var(--sectionMargin);
+}
+.portfolio .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 10px;
+}
+.portfolio .container .card {
+  display: flex;
+  flex-flow: column wrap;
+}
+.portfolio .container .card img {
+  width: 100%;
+  height: 300px;
+}
+.portfolio .container .card .text {
+  padding: var(--primaryPadding);
+  text-transform: capitalize;
+}
+.portfolio .container .card .text h3 {
+  color: var(--secondaryColor);
+}
+.portfolio .container .card .text p {
+  line-height: 1.5em;
+}
+
+/***************** about section **********************/
