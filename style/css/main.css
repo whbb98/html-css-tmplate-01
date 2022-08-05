@@ -352,8 +352,9 @@ header section .container p {
 .about .container .text hr {
   display: inline-block;
   width: 50%;
-
-  border: 3px solid var(--primaryColor);
+  border-bottom-width: 3px;
+  border-bottom-style: solid;
+  border-color: transparent transparent var(--primaryColor) transparent;
 }
 
 /***************** contact section **********************/
