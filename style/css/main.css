@@ -157,6 +157,7 @@ header section .container h1 {
   font-size: 3em;
 }
 header section .container p {
+  line-height: 1.6em;
   text-align: center;
   width: 50%;
 }
@@ -413,8 +414,11 @@ footer {
 footer .container {
   text-align: center;
 }
-footer .container p {
-}
 footer .container p span {
   color: var(--primaryColor);
+}
+footer .container a{
+  text-decoration: none;
+  color: var(--primaryColor);
+  font-weight: bolder;
 }
